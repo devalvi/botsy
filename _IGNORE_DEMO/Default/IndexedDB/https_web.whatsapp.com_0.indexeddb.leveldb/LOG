@@ -1,0 +1,6 @@
+2023/03/14-15:18:41.453 1e0fd Creating DB /home/marquemacx/Web/botsy/_IGNORE_DEMO/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb since it was missing.
+2023/03/14-15:18:42.289 1e0fd Reusing MANIFEST /home/marquemacx/Web/botsy/_IGNORE_DEMO/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/03/14-15:18:43.956 1e106 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/03/14-15:19:05.124 1e0fc Level-0 table #5: started
+2023/03/14-15:19:05.247 1e0fc Level-0 table #5: 954629 bytes OK
+2023/03/14-15:19:05.265 1e0fc Delete type=0 #3
