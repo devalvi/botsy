@@ -1,4 +1,8 @@
 const wa = require('@open-wa/wa-automate');
+const {
+    PythonShell: shell
+} = require('python-shell');
+
 
 wa.create({
     sessionId: "DEMO",
@@ -14,9 +18,21 @@ wa.create({
 }).then(client => start(client));
 
 function start(client) {
-    client.onMessage(async message => {
-        if (message.body === 'Hi') {
-            await client.sendText(message.from, '👋 Hello!');
-        }
+    client.onMessage(message => {
+        let pyshell = new shell('scrapper.py', {args: [message.body]});
+        pyshell.on('message', async function (messages) {
+            await client.sendText(message.from, messages);
+        });
+        pyshell.end(function (err, code, signal) {
+            if (err) throw err;
+            console.log('The exit code was: ' + code);
+            console.log('The exit signal was: ' + signal);
+            console.log('finished');
+        });
+
+
+        
+
+
     });
 }

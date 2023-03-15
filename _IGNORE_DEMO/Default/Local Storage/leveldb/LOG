@@ -1,2 +1,3 @@
-2023/03/14-15:18:33.979 1e0fc Creating DB /home/marquemacx/Web/botsy/_IGNORE_DEMO/Default/Local Storage/leveldb since it was missing.
-2023/03/14-15:18:34.069 1e0fc Reusing MANIFEST /home/marquemacx/Web/botsy/_IGNORE_DEMO/Default/Local Storage/leveldb/MANIFEST-000001
+2023/03/14-18:45:51.699 f88e Reusing MANIFEST /home/marquemacx/Web/botsy/_IGNORE_DEMO/Default/Local Storage/leveldb/MANIFEST-000001
+2023/03/14-18:45:51.700 f88e Recovering log #3
+2023/03/14-18:45:51.700 f88e Reusing old log /home/marquemacx/Web/botsy/_IGNORE_DEMO/Default/Local Storage/leveldb/000003.log 
