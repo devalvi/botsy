@@ -19,10 +19,14 @@ wa.create({
 
 function start(client) {
     client.onMessage(message => {
-        let pyshell = new shell('scrapper.py', {args: [message.body]});
+        let msgbody = message.body 
+        console.table({msgbody: msgbody})
+        let pyshell = new shell('scrapper.py', {args: [msgbody]});
         pyshell.on('message', async function (messages) {
-            await client.sendText(message.from, messages);
+        let data = JSON.parse(messages);
+        await client.sendImage(message.from, data.image, 'any', '*' + data.summary + '* \n ' + data.description, undefined, undefined, undefined, false, true)
         });
+
         pyshell.end(function (err, code, signal) {
             if (err) throw err;
             console.log('The exit code was: ' + code);

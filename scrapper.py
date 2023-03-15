@@ -1,7 +1,14 @@
+import json
 import sys
-from scrapper import WikiHow, search_wikihow
+from scrapper import search_wikihow
 
-max_results = 1  # default for optional argument is 10
-how_tos = search_wikihow(sys.argv[1], max_results)
-assert len(how_tos) == 1
-how_tos[0].print()
+how_tos = search_wikihow(sys.argv[1])[0]
+
+for steps in how_tos.steps:
+    # print(answer.summary)
+    jsond = json.dumps({"image": steps.picture,"summary": steps.summary, "description": steps.description})
+    print(jsond)
+    # print(answer.title)
+    # print(answer.intro)
+    # print(answer.n_steps)
+

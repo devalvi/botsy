@@ -1,13 +1,14 @@
 const { PythonShell: shell } = require('python-shell');
 
 function start() {
-    let pyshell = new shell('scrapper.py');
+    let pyshell = new shell('scrapper.py', {args: ['void']});
 
 
     
     pyshell.on('message', function (message) {
       // received a message sent from the Python script (a simple "print" statement)
-      console.log(message);
+      console.log(JSON.parse(message))
+      
     });
     
     // end the input stream and allow the process to exit
