@@ -1,9 +1,33 @@
 {
+  "name": "botsy",
+  "version": "0.1.0",
+  "description": "Light-weight whatsapp bot for general tasks",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "@open-wa/wa-automate": "^4.58.0",
-    "html-dom-parser": "^3.1.5",
+    "dotenv": "^16.0.3",
     "jsdom": "^21.1.1",
-    "node-html-parser": "^6.1.5",
-    "python-shell": "^5.0.0"
-  }
+    "node-wit": "^6.6.0",
+    "python-shell": "^5.0.0",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "github:pedroslopez/whatsapp-web.js#fix-buttons-list"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devalvi/botsy.git"
+  },
+  "keywords": [
+    "whatsapp-bot",
+    "downloader",
+    "wit-ai"
+  ],
+  "author": "ianaluvi.official@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devalvi/botsy/issues"
+  },
+  "homepage": "https://github.com/devalvi/botsy#readme"
 }

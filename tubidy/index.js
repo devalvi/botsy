@@ -8,7 +8,7 @@ async function fetcher(url){
          console.error("Error: " ,err); 
        }
 }
-function getMusicInfo(query){
+function getMediaInfo(query){
     return fetcher(query).then(HTML => {
                     let card = HTML.window.document.body.getElementsByClassName('media')[0];
                     let tubidy = 'https://tubidy.mobi/'
@@ -25,4 +25,4 @@ function getMusicInfo(query){
     })
 }
 
-module.exports = getMusicInfo
+module.exports = getMediaInfo
